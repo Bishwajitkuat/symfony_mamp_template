@@ -13,7 +13,8 @@ services:
       - SYS_NICE
     restart: always
     volumes:
-      - miniProjectDB-data:/var/lib/mysql
+      # - miniProjectDB-data:/var/lib/mysql
+      - ./:/docker-entrypoint-initdb.d
     networks:
       dev:
 
